@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'TT Norms';
+    src: local('TT Norms'), url('../fonts/TTNorms-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TT Norms Light';
+    src: local('TT Norms'), url('../fonts/TTNorms-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TT Norms Bold';
+    src: local('TT Norms'), url('../fonts/TTNorms-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TT Norms Black';
+    src: local('TT Norms'), url('../fonts/TTNorms-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TT Norms Medium';
+    src: local('TT Norms'), url('../fonts/TTNorms-Medium.otf') format('opentype');
+}
+
+:root {
+    --dark : #0D1C2E;
+    --blue :  #2a8bf2;
+    --pink : #FF3366;
+    --light: #707C97;
+    --bg1: #E6ECFE;
+    --bg2: #FAFBFF;
+    --white:  #FFFFFF;
+    --green: #00C305;
+
+}
+
+.font16 {
+    font-size: 16px
+}
+
+.text-muted {
+    color: var(--light);
+}
+
+.align-icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.align-icon-search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self: start;
+}
+
+.align-icon-arrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'TT Norms Medium';
+}
+
+/*  */
+
+.ca-chat-messageList {
+    padding-left: 350px;
+    padding-top: 80px;
+    width: 580px;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-grow: 1;
+    border-right: 2px solid #F5F4FB;
+}
+
+.ca-search-area {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.serach-input {
+    height: 50px;
+    border: none;
+}
+
+.serach-input::placeholder {
+    font-family: 'TT Norms Medium';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #707C97;
+}
+
+.message-filter {
+    color: #707C97;
+    padding-left: 15px;
+}
+
+/*  */
+
+/* sidebar */
+
+.ca-sidebar__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    background: var(--white);
+    box-shadow: 14.0351px 0px 25px rgba(86, 128, 248, 0.03), 35.0877px 0px 70px rgba(86, 128, 248, 0.05), 23.8596px 5.61404px 50px rgba(0, 0, 0, 0.02);
+}
+
+.ca-sidebar-userDetails {
+    padding: 92px 0px 0px 102px;
+}
+
+.user-name__text {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.user-avatar__image {
+    border: 5px solid var(--white);
+    border-radius: 50%;
+}
+
+.ca-sidebar-navlinks {
+    padding: 30px 32px;
+    font-family: 'TT Norms Medium', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: var(--light);
+    text-transform: uppercase;
+}
+
+.ca-sidebar-navlinks li {
+    list-style: none;
+    padding: 50px 0px 0px 25px;
+}
+
+.ca-sidebar-navlinks li.active {
+    color: var(--blue);
+}
+
+.ca-sidebar-navlinks li.active::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    margin-top: -10px;
+    width: 5px;
+    padding: 0px 0px 40px 2px;
+    background: var(--blue);
+    box-shadow: 1px 0px 10px rgba(42, 139, 242, 0.45), 0px 0px 10px rgba(42, 139, 242, 0.55), 4px 0px 25px rgba(42, 139, 242, 0.75);
+    border-radius: 3px;
+}
+
+.ca-sidebar-logout-wrapper {
+    position: relative;
+    height: 30vh;
+}
+
+.ca-sidebar-logout {
+    padding: 0px 0px 0px 25px;
+    font-family: 'TT Norms Medium', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: var(--light);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 50px;
+}
+
+/*  */
+
+/* chat Area */
+
+.chat-title-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+/* Button */
+
+.ca-btn {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 6px;
+    height: 60px;
+    border: none;
+    padding: 18px 25px 18px 25px;
+    text-transform: capitalize;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.ca-btn-primary {
+    background: linear-gradient(92.68deg, #7CB8F7 0%, #2A8BF2 100%);
+    box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15);
+}
+
+
+.ca-card__container {
+    width: 580px;
+    height: 220px;
+    background: var(--white);
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    padding: 20px 0px 0px 20px;
+    width: 54px;
+}
+
+.user-title {
+    font-family: 'TT Norms Medium';
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0em;
+
+}
+
+.user-status {
+    font-family: 'TT Norms Medium';
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: var(--blue);
+}
+
+.attachments {
+    display: flex;
+    color: var(--white);
+    border-radius: 20px;
+    width: 110px;
+    height: 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.attachments[background="blue"]{
+    background: rgba(42, 139, 242, 0.25);
+    color: var(--blue);
+    font-size: 14px;
+}
+
+.attachments[background="pink"] {
+    background: rgba(255, 51, 102, 0.25);
+    color: var(--pink);
+    font-size: 14px;
+}
+
+
+.user-avatar::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.user-wrapper {
+    position: relative;
+    border-radius: 50%;
+}
+
+.is_online {
+    position: absolute;
+    background: var(--green);
+    border: 1.5px solid #FFFFFF;
+    width: 10px;
+    height: 10px;
+    left: 20px;
+    top: 25px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.read-count {
+    background: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 15px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 15px rgba(198, 27, 74, 0.05), 2px 2px 10px rgba(198, 27, 74, 0.1), 1px 1px 50px rgba(198, 27, 74, 0.15);
+    width: 20px;
+    height: 20px;
+    color: var(--white);
+}
