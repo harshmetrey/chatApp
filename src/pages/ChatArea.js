@@ -1,9 +1,16 @@
+import { useState } from 'react'
+import {FiChevronDown, FiPlus, FiSearch} from 'react-icons/fi'
 import ChatList from '../components/ChatList'
 
+export default function ChatArea ({data, handleActiveChat}) {
 
-import {FiChevronDown, FiPlus, FiSearch} from 'react-icons/fi'
+    const [selected, setSelected] = useState(3)
 
-export default function ChatArea ({data}) {
+    const handleChatSelection = (item) => {
+        setSelected(item.userid)
+        handleActiveChat(item);
+    }
+
     return (
         <div className="ca-chat-area">
             <div className="chat-title-header">
@@ -23,6 +30,8 @@ export default function ChatArea ({data}) {
             <div className="Chat-list__container">
                     <ChatList 
                         data={data}
+                        handleSelect={handleChatSelection}
+                        isSelected={selected}
                     />
             </div>
         </div>

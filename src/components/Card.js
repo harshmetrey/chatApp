@@ -6,11 +6,11 @@ import { Box, Grid } from '@material-ui/core'
 
 import { FiDisc, FiFile, FiImage, FiMic } from 'react-icons/fi'
 
-export default function Card({ item, key }) {
+export default function Card({ item, handleSelection, isSelected }) {
     return (
-        <div className="ca-card__container">
+        <div className={item.userid === isSelected ? "ca-card__conatiner isSelected" : "ca-card__container"} onClick={() => handleSelection(item)}>
             <div className="ca-card-body">
-                <Grid container>
+                <Grid container alignItems="center">
                     <Grid item>
                         <div className="user-wrapper">
                             {item.is_online && <div className="is_online"></div>}
@@ -38,7 +38,7 @@ export default function Card({ item, key }) {
                         </Box>
                     </Grid>
                     <Grid item>
-                        <Box paddingTop="25px" className="text-muted">
+                        <Box paddingTop="25px" className="text-muted time">
                             {moment(item.last_modified).startOf('hour').fromNow()}
                         </Box>
                     </Grid>
@@ -48,8 +48,8 @@ export default function Card({ item, key }) {
                         <Grid>
                             <Grid container alignItems="center">
                                 <Grid item xs={10}>
-                                    <Box padding="30px" className="text-muted">
-                                        <FiMic size="0.7rem" /> Voice Message (1:15)
+                                    <Box padding="30px" className="text-muted voice_note">
+                                        <FiMic size="0.7rem"/> Voice Message (1:15)
                                     </Box>
                                 </Grid>
                                 <Grid item>
@@ -74,7 +74,7 @@ export default function Card({ item, key }) {
                         :
                         <Grid container alignItems="center">
                             <Grid item xs={10}>
-                                <Box className="text-muted font16" padding="30px">{item.last_message}</Box>
+                                <Box className="text-muted font16 last_text" padding="30px">{item.last_message}</Box>
                             </Grid>
                             <Grid item>
                                 {item.unread_count && <div className="read-count">{item.unread_count}</div>}
