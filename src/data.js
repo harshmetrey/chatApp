@@ -1,13 +1,19 @@
+import Avatar1 from '../src/assets/images/24.png'
+import Avatar2 from '../src/assets/images/241.png'
+import Avatar3 from '../src/assets/images/242.png'
+import Avatar4 from '../src/assets/images/243.png'
+
+
 
 export const chatData = [
     {
         userid: 1,
-        avatar_url: "https://gravatar.com/avatar/c6701b5f63bb9a8e37f64d9a3214a71f?s=400&d=robohash&r=x",
+        avatar_url: Avatar1,
         user_name: 'Luy Robin',
         chat_history:
             [{
                 id: 1,
-                text: 'hello',
+                text: 'Hey, How are you?',
                 status: "receive",
                 created_on: '02/08/2021, 15:53:57',
                 time: '02/08/2021, 15:53:57',
@@ -15,23 +21,24 @@ export const chatData = [
             },
             {
                 id: 2,
-                text: 'Hi',
+                text: 'simply dummy text of the printing and typesetting industry.',
                 status: "receive",
                 created_on: '02/08/2021, 15:53:57',
                 time: '02/08/2021, 15:53:57'
             },
             {
                 id: 3,
-                text: 'hello',
+                text: 'it look like readable English',
                 status: "send",
                 created_on: '02/08/2021, 15:53:57',
                 time: '02/08/2021, 15:53:57'
             },
             {
                 id: 4,
-                text: 'Hi',
+                text: "Most of its text is made up from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes).",
                 status: "receive",
                 created_on: '02/08/2021, 15:53:57',
+                time: '02/08/2021, 15:53:57'
             }
             ],
         voice_note: false,
@@ -43,7 +50,7 @@ export const chatData = [
     },
     {
         userid: 2,
-        avatar_url: "https://gravatar.com/avatar/c6701b5f63bb9a8e37f64d9a3214a71f?s=400&d=robohash&r=x",
+        avatar_url: Avatar2,
         user_name: 'Nika Doe',
         chat_history:
             [{
@@ -57,7 +64,7 @@ export const chatData = [
             },
             {
                 id: 2,
-                text: 'Sup',
+                text: 'Voice Message (1:15)',
                 status: "receive",
                 created_on: '07/28/2021, 15:53:57',
                 time: '07/28/2021, 15:53:57',
@@ -72,7 +79,7 @@ export const chatData = [
     },
     {
         userid: 3,
-        avatar_url: "https://gravatar.com/avatar/c6701b5f63bb9a8e37f64d9a3214a71f?s=400&d=robohash&r=x",
+        avatar_url: Avatar3,
         user_name: 'Joe Doe',
         chat_history:
             [{
@@ -119,5 +126,47 @@ export const chatData = [
         status: '07/30/2021, 15:53:57',
         last_modified: '07/30/2021, 15:53:57',
         last_message: "Cicero famously orated against his political opponent Lucius Sergius Catilina."
-    }
+    },
+    {
+        userid: 4,
+        avatar_url: Avatar4,
+        user_name: 'Luy Robin',
+        chat_history:
+            [{
+                id: 1,
+                text: 'hello',
+                status: "receive",
+                created_on: '02/08/2021, 15:53:57',
+                time: '02/08/2021, 15:53:57',
+                isFirst: true
+            },
+            {
+                id: 2,
+                text: 'Hi',
+                status: "receive",
+                created_on: '02/08/2021, 15:53:57',
+                time: '02/08/2021, 15:53:57'
+            },
+            {
+                id: 3,
+                text: 'hello',
+                status: "send",
+                created_on: '02/08/2021, 15:53:57',
+                time: '02/08/2021, 15:53:57'
+            },
+            {
+                id: 4,
+                text: 'Hi',
+                status: "receive",
+                created_on: '02/08/2021, 15:53:57',
+                time: '02/08/2021, 15:53:57'
+            }
+            ],
+        voice_note: false,
+        unread_count: 1,
+        last_message: "There are many variations of passages of Lorem Ipsum available,",
+        last_modified: '02/08/2021, 15:53:57',
+        status: '07/30/2021, 15:53:57',
+        is_online: true
+    },
 ]

@@ -295,8 +295,14 @@ body {
 
 .user-avatar {
     border-radius: 50%;
-    padding: 20px 0px 0px 20px;
+    margin: 20px 15px 0px 30px;
     width: 54px;
+}
+
+.user-avatar-chat {
+    border-radius: 50%;
+    margin: -20px 0px 0px 10px;
+    width: 42px;
 }
 
 .user-title {
@@ -359,8 +365,8 @@ body {
     border: 1.5px solid #FFFFFF;
     width: 10px;
     height: 10px;
-    left: 20px;
-    top: 25px;
+    left: 30px;
+    top: 20px;
     height: 10px;
     border-radius: 50%;
 }
@@ -437,6 +443,7 @@ body {
 
 #chat-container {
     max-height: 600px;
+    min-height: 600px;
     overflow: hidden scroll;
 }
 
@@ -601,6 +608,12 @@ textarea:focus-within {
 
     .user-avatar {
         width: 45px;
+        margin: 30px 8px 0px 22px;
+    }
+
+    .is_online {
+        top: 32px;
+        left: 20px;
     }
 
     .user-title {

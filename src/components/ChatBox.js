@@ -22,7 +22,6 @@ export default function ChatBox({ activeChat, handleChange }) {
                 <Grid container alignItems="center">
                     <Grid item> 
                         <div className="user-wrapper">
-                            {activeChat.is_online && <div className="is_online"></div>}
                             <img alt="user_avatar" className="user-avatar" src={activeChat.avatar_url} />
                         </div>
                     </Grid>

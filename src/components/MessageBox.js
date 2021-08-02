@@ -19,7 +19,7 @@ export default function MessageBox({ messageItems, activeChat }) {
                             <Grid container spacing={1} alignItems="center">
                                 <Grid item>
                                     {item.status === 'receive' && <div className="user-wrapper">
-                                        <img alt="user_avatar" className="user-avatar" src={activeChat.avatar_url} />
+                                        <img alt="user_avatar" className="user-avatar-chat" src={activeChat.avatar_url} />
                                     </div>}
                                 </Grid>
                                 {item.status === 'send' &&
@@ -57,7 +57,7 @@ export default function MessageBox({ messageItems, activeChat }) {
                                             </Grid>}
                                         {!item.file && !item.fileText && item.text}
                                     </Box>
-                                    <div className="text-muted font14" style={{ textAlign: 'right' }}>{moment(item.time).fromNow()}</div>
+                                    <div className="text-muted font14" style={{ textAlign: 'right', padding: item.status === 'receive' ? '5px 10px 0px 0px': '5px 8px 0px 0px' }}>{moment(item.time).fromNow()}</div>
                                 </Grid>
                                 {item.status === 'receive' && <Grid item><FiMoreHorizontal color="#707C97" /></Grid>}
                                 {item.type === 'delivered' && <Grid item><BsCheck color="#707C97" /></Grid>}
