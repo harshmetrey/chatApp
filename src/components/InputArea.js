@@ -13,6 +13,7 @@ export default function InputArea ({handleChange}) {
     const handleSubmit = () => {
         handleChange(inputText)
         textAreaRef.current.value = ''
+        setInputText('')
     }
 
 
@@ -25,7 +26,7 @@ export default function InputArea ({handleChange}) {
                 </div>
             </Grid>
             <Grid item xs={8}>
-            <textarea ref={textAreaRef} onChange={(e) => setInputText(e.target.value)} placeholder="Type a message here" class="ca-text-area"/>
+            <textarea ref={textAreaRef} onChange={(e) => setInputText(e.target.value)} placeholder="Type a message here" className="ca-text-area"/>
             </Grid>
             <Grid item>
                 <div className="mat-round" color="transparent">

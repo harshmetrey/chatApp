@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React, { createRef, useEffect } from 'react'
 import { Box, Grid } from '@material-ui/core'
 import moment from 'moment'
 import { FiDisc, FiMoreVertical, FiPaperclip } from 'react-icons/fi'
@@ -9,7 +9,12 @@ import MessageBox from './MessageBox'
 
 export default function ChatBox({ activeChat, handleChange }) {
 
-  const messagesEndRef = createRef();
+    const messagesEndRef = createRef();
+
+    useEffect(() => {
+        const scroller = document.getElementById('chat-container').scrollHeight
+        messagesEndRef.current.scrollTop = scroller;
+    }, [activeChat, messagesEndRef])
 
     return (
         <div className="chat-box___wrapper">
@@ -57,9 +62,8 @@ export default function ChatBox({ activeChat, handleChange }) {
                     </Box>
                 </Grid>
             </div>
-            <div className="ca-message-area-wrapper">
+            <div ref={messagesEndRef} id="chat-container" className="ca-message-area-wrapper">
                 <MessageBox
-                    ref={messagesEndRef}
                     activeChat={activeChat}
                     messageItems={activeChat.chat_history}
                 />
