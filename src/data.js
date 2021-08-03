@@ -30,6 +30,7 @@ export const chatData = [
                 id: 3,
                 text: 'it look like readable English',
                 status: "send",
+                type: 'read',
                 created_on: '02/08/2021, 15:53:57',
                 time: '02/08/2021, 15:53:57'
             },
@@ -51,7 +52,7 @@ export const chatData = [
     {
         userid: 2,
         avatar_url: Avatar2,
-        user_name: 'Nika Doe',
+        user_name: 'Jared Sunn',
         chat_history:
             [{
                 id: 1,
@@ -80,7 +81,7 @@ export const chatData = [
     {
         userid: 3,
         avatar_url: Avatar3,
-        user_name: 'Joe Doe',
+        user_name: 'Nika Jerrardo',
         chat_history:
             [{
                 id: 1,
@@ -88,7 +89,6 @@ export const chatData = [
                 status: "receive",
                 created_on: '07/29/2021, 15:53:57',
                 time: '07/29/2021, 15:53:57',
-
                 isFirst: true
 
             },
@@ -130,7 +130,7 @@ export const chatData = [
     {
         userid: 4,
         avatar_url: Avatar4,
-        user_name: 'Luy Robin',
+        user_name: 'David Amrosa',
         chat_history:
             [{
                 id: 1,
@@ -151,6 +151,7 @@ export const chatData = [
                 id: 3,
                 text: 'hello',
                 status: "send",
+                type: 'read',
                 created_on: '02/08/2021, 15:53:57',
                 time: '02/08/2021, 15:53:57'
             },
