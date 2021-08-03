@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import {FiChevronDown, FiPlus, FiSearch} from 'react-icons/fi'
 import ChatList from '../components/ChatList'
 

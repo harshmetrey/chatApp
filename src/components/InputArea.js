@@ -2,7 +2,7 @@ import { Grid } from "@material-ui/core";
 import { FiPlus } from "react-icons/fi";
 import {RiSendPlaneLine} from 'react-icons/ri'; 
 import {HiOutlineEmojiHappy} from 'react-icons/hi';
-import { createRef, useState } from "react";
+import React, { createRef, useState } from "react";
 
 export default function InputArea ({handleChange}) {
 

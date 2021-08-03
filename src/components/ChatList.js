@@ -1,3 +1,4 @@
+import React from 'react'
 import Card from './Card'
 export default function ChatList ({data, handleSelect, isSelected}) {
     return (

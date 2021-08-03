@@ -5,7 +5,7 @@ import ChatArea from './pages/ChatArea'
 import ChatBox from './components/ChatBox'
 
 import { chatData } from './data'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Grid } from '@material-ui/core'
 import moment from 'moment'
 

@@ -1,4 +1,5 @@
 
+import React from 'react'
 import { FiChevronDown, FiGrid, FiMessageCircle, FiUser, FiBell, FiCalendar, FiSettings, FiPower } from "react-icons/fi";
 
 import UserAvatar from '../assets/images/user-avatar.svg'
